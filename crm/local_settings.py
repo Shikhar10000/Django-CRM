@@ -16,14 +16,8 @@ EMAIL_USE_TLS = True
 
 # Database Settings
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dj_crm',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': os.getenv('DB_HOST', 'postgres://rtijkbfylevjrc:1249e0a38db98e871463b5134f7075f0c41a21a88a999712d1c26e12ecd98254@ec2-54-247-78-30.eu-west-1.compute.amazonaws.com:5432/ddhd1h9qjmni38'),
-        'PORT': os.getenv('DB_PORT', '5432')
-    }
+    'default': dj_database_url.config(default=config(''postgres://rtijkbfylevjrc:1249e0a38db98e871463b5134f7075f0c41a21a88a999712d1c26e12ecd98254@ec2-54-247-78-30.eu-west-1.compute.amazonaws.com:5432/ddhd1h9qjmni38'')
+    
 }
 
 # Server Customizations
