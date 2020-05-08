@@ -1,6 +1,6 @@
 import os
 
-import dj-database-url
+import dj_database_url
 # Make this unique, and don't share it with anybody.
 # http://www.miniwebtool.com/django-secret-key-generator/
 SECRET_KEY = '19uaor)%xw51vl1l(1%xf*nam-*a==e221a#^)rnk&n!u6o#-z'
