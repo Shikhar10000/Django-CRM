@@ -188,6 +188,7 @@ class LoginView(TemplateView):
                         "ENABLE_GOOGLE_LOGIN": settings.ENABLE_GOOGLE_LOGIN,
                         "GP_CLIENT_SECRET": settings.GP_CLIENT_SECRET,
                         "GP_CLIENT_ID": settings.GP_CLIENT_ID,
+                        "APPLICATION_NAME":settings.APPLICATION_NAME,
                         "error": True,
                         "message":
                         "Your username and password didn't match. \
@@ -197,6 +198,7 @@ class LoginView(TemplateView):
                     "ENABLE_GOOGLE_LOGIN": settings.ENABLE_GOOGLE_LOGIN,
                     "GP_CLIENT_SECRET": settings.GP_CLIENT_SECRET,
                     "GP_CLIENT_ID": settings.GP_CLIENT_ID,
+                    "APPLICATION_NAME":settings.APPLICATION_NAME,
                     "error": True,
                     "message":
                     "Your Account is inactive. Please Contact Administrator"
@@ -205,6 +207,7 @@ class LoginView(TemplateView):
                 "ENABLE_GOOGLE_LOGIN": settings.ENABLE_GOOGLE_LOGIN,
                 "GP_CLIENT_SECRET": settings.GP_CLIENT_SECRET,
                 "GP_CLIENT_ID": settings.GP_CLIENT_ID,
+                "APPLICATION_NAME":settings.APPLICATION_NAME,
                 "error": True,
                 "message":
                 "Your Account is not Found. Please Contact Administrator"
@@ -214,6 +217,7 @@ class LoginView(TemplateView):
             "ENABLE_GOOGLE_LOGIN": settings.ENABLE_GOOGLE_LOGIN,
             "GP_CLIENT_SECRET": settings.GP_CLIENT_SECRET,
             "GP_CLIENT_ID": settings.GP_CLIENT_ID,
+            "APPLICATION_NAME":settings.APPLICATION_NAME,
             # "error": True,
             # "message": "Your username and password didn't match. Please try again."
             "form": form
