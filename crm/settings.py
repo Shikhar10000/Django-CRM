@@ -16,7 +16,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 # Application definition
 
 LOGIN_REDIRECT_URL = '/'
-
+APPLICATION_NAME ='Trul1CRM'
 LOGIN_URL = '/login/'
 
 INSTALLED_APPS = [
