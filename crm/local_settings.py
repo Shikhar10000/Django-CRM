@@ -12,7 +12,7 @@ EMAIL_HOST_USER = os.getenv('SG_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('SG_PWD', '')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
+DEBUG=True
 
 # Database Settings
 DATABASES = {
