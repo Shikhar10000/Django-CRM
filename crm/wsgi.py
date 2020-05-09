@@ -9,4 +9,4 @@ sys.path.append(PROJECT_DIR)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "crm.settings")
 
-application = DjangoWhiteNoise(application)
+application = get_wsgi_application()
