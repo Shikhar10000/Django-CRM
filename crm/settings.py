@@ -383,16 +383,16 @@ if SENTRY_ENABLED and not DEBUG:
 # HAYSTACK_DEFAULT_OPERATOR = 'AND'
 
 # Load the local settings file if it exists
-if DEBUG:
-    try:
-        from .dev_settings import *
-    except ImportError:
-        raise ImproperlyConfigured("No dev settings file found")
-else:
-    try:
-        from .local_settings import *
-    except ImportError:
-        raise ImproperlyConfigured("No local settings file found")
+# if DEBUG:
+    # try:
+        # from .dev_settings import *
+    # except ImportError:
+        # raise ImproperlyConfigured("No dev settings file found")
+# else:
+try:
+    from .local_settings import *
+except ImportError:
+    raise ImproperlyConfigured("No local settings file found")
 
 CACHES = {
     'default': {
