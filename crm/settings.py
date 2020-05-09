@@ -9,9 +9,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '19uaor)%xw51vl1l(1%xf*nam-*a==e221a#^)rnk&n!u6o#-z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG_STATUS', False)
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 # Application definition
 
@@ -85,11 +85,12 @@ DATABASES = {
         'NAME': 'dj_crm',
         'USER': 'postgres',
         'PASSWORD': 'root',
-        'HOST': os.getenv('DB_HOST', 'postgres://rtijkbfylevjrc:1249e0a38db98e871463b5134f7075f0c41a21a88a999712d1c26e12ecd98254@ec2-54-247-78-30.eu-west-1.compute.amazonaws.com:5432/ddhd1h9qjmni38'),
-        'PORT': os.getenv('DB_PORT', '5432')
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
-
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
 # Password validation
